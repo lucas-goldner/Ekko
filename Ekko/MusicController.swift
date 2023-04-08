@@ -7,6 +7,7 @@
 
 import Foundation
 import MediaPlayer
+import SwiftUI
 
 class MusicController: ObservableObject {
     @Published var currentSongTitle: String?
@@ -30,5 +31,9 @@ class MusicController: ObservableObject {
             currentSongTitle = nil
             currentSongArtwork = nil
         }
+    }
+    
+    func scratchAccordingToRotationAngle(rotationAngle: Angle) {
+        print(rotationAngle.degrees)
     }
 }

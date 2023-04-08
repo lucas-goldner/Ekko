@@ -9,6 +9,7 @@ import MediaPlayer
 import SwiftUI
 
 struct ContentView: View {
+    @State private var rotationAngle: Angle = .zero
     @StateObject var musicController = MusicController()
     
     var body: some View {
@@ -20,6 +21,13 @@ struct ContentView: View {
                     .clipShape(Circle())
                     .overlay(Circle().stroke(Color.white, lineWidth: 2))
                     .shadow(radius: 7)
+                    .rotationEffect(rotationAngle)
+                    .gesture(RotationGesture()
+                        .onChanged { angle in
+                            rotationAngle = angle
+                            musicController.scratchAccordingToRotationAngle(rotationAngle: angle)
+                        }
+                    )
             } else {
                 Image(systemName: "music.note")
                     .imageScale(.large)
@@ -32,7 +40,8 @@ struct ContentView: View {
                     .foregroundColor(.accentColor)
             }
             .padding()
-        }.onAppear {
+        }
+        .onAppear {
             musicController.checkForCurrentSong()
         }
         .padding()
