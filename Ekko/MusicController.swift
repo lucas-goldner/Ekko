@@ -33,7 +33,7 @@ class MusicController: ObservableObject {
         }
     }
     
-    func scratchAccordingToRotationAngle(rotationAngle: Angle) {
-        print(rotationAngle.degrees)
+    func scratchAccordingToRotationAngle(degrees: CGSize) {
+        print(degrees)
     }
 }

@@ -9,7 +9,7 @@ import MediaPlayer
 import SwiftUI
 
 struct ContentView: View {
-    @State private var rotationAngle: Angle = .zero
+    @State var degrees = CGSize.zero
     @StateObject var musicController = MusicController()
     
     var body: some View {
@@ -21,13 +21,17 @@ struct ContentView: View {
                     .clipShape(Circle())
                     .overlay(Circle().stroke(Color.white, lineWidth: 2))
                     .shadow(radius: 7)
-                    .rotationEffect(rotationAngle)
-                    .gesture(RotationGesture()
-                        .onChanged { angle in
-                            rotationAngle = angle
-                            musicController.scratchAccordingToRotationAngle(rotationAngle: angle)
-                        }
+                    .rotationEffect(Angle(degrees: Double(-degrees.width)))
+                    .gesture(
+                        DragGesture().onChanged({ (value) in
+                            degrees = value.translation
+                        }).onEnded({ (value) in
+                            musicController.scratchAccordingToRotationAngle(degrees: degrees)
+                            degrees = .zero
+                        })
                     )
+                    .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0), value: degrees)
+                
             } else {
                 Image(systemName: "music.note")
                     .imageScale(.large)
