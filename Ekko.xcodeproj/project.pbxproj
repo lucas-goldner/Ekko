@@ -23,6 +23,7 @@
 		4D5C654F29E1C2E4005FCBFF /* Ekko_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C654E29E1C2E4005FCBFF /* Ekko_Watch_AppUITests.swift */; };
 		4D5C655129E1C2E4005FCBFF /* Ekko_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C655029E1C2E4005FCBFF /* Ekko_Watch_AppUITestsLaunchTests.swift */; };
 		4D61E1D529E1D718002F1952 /* MusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61E1D429E1D718002F1952 /* MusicController.swift */; };
+		4D61E1D829E38292002F1952 /* scratch_0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4D61E1D729E38291002F1952 /* scratch_0.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		4D61E1D029E1C766002F1952 /* Ekko-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Ekko-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4D61E1D129E1C773002F1952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4D61E1D429E1D718002F1952 /* MusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicController.swift; sourceTree = "<group>"; };
+		4D61E1D729E38291002F1952 /* scratch_0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scratch_0.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		4D5C64FF29E1C2E0005FCBFF = {
 			isa = PBXGroup;
 			children = (
+				4D61E1D629E37F50002F1952 /* EkkoExtraAssets */,
 				4D5C650A29E1C2E0005FCBFF /* Ekko */,
 				4D5C651B29E1C2E2005FCBFF /* EkkoTests */,
 				4D5C652529E1C2E2005FCBFF /* EkkoUITests */,
@@ -248,6 +251,14 @@
 				4D5C655029E1C2E4005FCBFF /* Ekko_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "Ekko Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		4D61E1D629E37F50002F1952 /* EkkoExtraAssets */ = {
+			isa = PBXGroup;
+			children = (
+				4D61E1D729E38291002F1952 /* scratch_0.mp3 */,
+			);
+			path = EkkoExtraAssets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,6 +436,7 @@
 			files = (
 				4D5C651329E1C2E2005FCBFF /* Preview Assets.xcassets in Resources */,
 				4D5C651029E1C2E2005FCBFF /* Assets.xcassets in Resources */,
+				4D61E1D829E38292002F1952 /* scratch_0.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

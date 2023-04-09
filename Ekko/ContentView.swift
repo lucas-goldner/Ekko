@@ -38,12 +38,6 @@ struct ContentView: View {
                     .foregroundColor(.accentColor)
             }
             Text(musicController.currentSongTitle ?? "No Song Playing")
-            Button(action: {}) {
-                Image(systemName: "backward.fill")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-            }
-            .padding()
         }
         .onAppear {
             musicController.checkForCurrentSong()
