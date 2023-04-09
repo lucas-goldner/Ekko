@@ -34,6 +34,9 @@ class MusicController: ObservableObject {
     }
     
     func scratchAccordingToRotationAngle(degrees: CGSize) {
-        print(degrees)
+        let valueToSkipBy : Double = (-degrees.width) / 10
+        let musicPlayerController = MPMusicPlayerController.systemMusicPlayer
+        let playbackTime = musicPlayerController.currentPlaybackTime
+        musicPlayerController.currentPlaybackTime = max(playbackTime + valueToSkipBy, 0)
     }
 }
